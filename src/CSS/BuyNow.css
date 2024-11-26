@@ -1,0 +1,109 @@
+.buynow_container{
+    width: 100%;
+    height: 100vh;
+  position: relative;
+    
+}
+.buynow_card{
+    width: 450px;
+    padding: 20px;
+    top:0px;
+}
+
+
+.detail{
+    color: blue;
+    font-size: 45px;
+    font-weight: bold;
+}
+.buynow_image{
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.buynow_text{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+
+
+}
+.buynow_rating{
+    font-size: 20px;
+    background: green;
+    width: 65px;
+    margin-top: 10px;
+
+
+
+}
+.buynow_price{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+.buynow_delivery{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.payment{
+   position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 700px;
+    width: 700px;
+   
+}
+
+.finalprice{
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-top: 30px;
+}
+.paynow_button{
+    width: 220px;
+    height: 60px;
+    margin: 50px auto;   
+    font-size: 20px;
+  margin-left: 30px;
+  
+  
+    cursor: pointer;
+
+}
+.yourOrder{
+    color: blue;
+    font-size: 45px;
+    font-weight: bold;
+}
+.productLeft{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+
+}
+.totalRight{
+    position: absolute;
+    right: 200px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+   
+}
+.price1{
+    margin-top: -30px;
+}
+.borderbottom{
+    border-bottom: 1px solid #797979;
+    margin-top: 10px;
+}
