@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat Application</title>
+        <style>
+            ul.myul{
+                list-style: none;
+            }
+             body{
+               font-size: 20px;
+               font-weight: bold;
+               /* background-image:url('./background1.jpg');
+                */
+                background: #E8F7FE;
+               background-repeat: no-repeat;
+               background-size: cover;
+               background-position: center;
+               height: 100vh;
+                 
+            } */
+             /* .image{
+                position: relative;
+                width: 100%;
+                height: 100%;
+             } */
+             .image>img{
+                object-fit:cover;
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+               height: 708px;
+          
+             }
+             .two{
+                position: absolute;
+                top:0px;
+             }
+             .btn{
+                width: 150px;
+    height: 50px;
+    border:2px solid  #BB86FC;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+ 
+    border-radius: 10px;
+    background-color: #fff;
+             }
+             
+
+             input[type=text]{
+                height: 40px;
+                width: 600px;
+                border-radius: 10px;
+                font-size: 20px;
+                font-weight: bold;
+               
+               
+             }
+
+           
+        </style>
+    </head>
+    <body>
+        <!-- <div class="image"><img src="./katrina7.jpg"> -->
+       <!-- <div class="two"> -->
+
+
+        <h1>Chat Application</h1>
+        <ul class="myul">
+            <li>Welcome</li>
+        </ul>
+        <form class="myForm">
+            <input type="text" size="100"  class="myinput" />
+            <input type="submit" class="btn" />
+        </form>
+
+    <!-- </div> -->
+<!-- </div> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.min.js" integrity="sha512-xzC4RSo+4m1clLhr0pQr6yFjO9bJ0py6+l65SBibI8/pSEU8U4iVZ7xm95WRq8PXw2MKv8SSR3QkqR2jciG5Ug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var socket = io();
+
+            var ul = document.querySelector('ul.myul')
+
+            socket.on('serverevent', (payload) => {
+                console.log(payload);
+                ul.innerHTML += `<li >${payload}</li>`;
+            })
+            document.querySelector('form.myForm').addEventListener('submit',(e)=>{
+                e.preventDefault();
+                console.log('ok');
+                
+                const msg = document.querySelector('input.myinput').value;
+
+
+                console.log('myinput',msg);
+
+                document.querySelector('input.myinput').value = '';
+
+                socket.emit('clientevent',msg);//Speaking
+
+
+            })
+        </script>
+    </body>
+</html>
