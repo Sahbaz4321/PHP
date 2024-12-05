@@ -1,0 +1,18 @@
+hi i am sahbaz and i live in punjab
+php hypertexr pre processor
+rasmus lerdorf in 1994
+
+old=>personal home page 
+date(d || jS || F || m || M || n ||Y y )
+day || 18th ||  month || 08 || aug || 8 || 2024 24  
+
+D l N W
+sun sunday 7 0 
+
+Encapsulation restricts direct access to an object's properties and methods. Use public, protected, and private to control access.
+
+An interface defines a contract that implementing classes must follow.
+
+// include and require
+//require me error aayegi to aage ki script execute nahi hogi
+//include me error aayegi but aage ki script execute hogi
